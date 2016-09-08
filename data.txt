@@ -1,0 +1,5 @@
+-- case class Album(id: Long = 0L, artist: String, title: String, year: Int,rating : Int )
+
+-- insert into "albums" values ( 'Michael' , 'Bad','Hello Michael',1987, 5);
+-- insert into "albums" values ( 'Bob' , 'King of pop' ,'Hello Bob', 2008, 3);
+-- insert into "albums" values ( 'John' , 'Invincible' ,'Hello John', 2006 , 4 );

@@ -1,0 +1,37 @@
+@* @(message: String)
+
+@main("Welcome to Play") {
+
+    @play20.welcome(message)
+
+}
+*@
+
+
+@(albums: Seq[Album])
+
+@main("Album database") {
+    <div>
+        <div id="albums">
+            <h2>Insert a kitty cat here:</h2>
+
+            <form action="/insert/album" method="POST">
+                <input name="artist" type="text" placeholder="Enter Arist name"/>
+                <input name="title" type="text" placeholder="Enter title name"/>
+                <input name="year" type="text" placeholder="Enter year value int"/>
+                <input name="rating" type="text" placeholder="Enter rating int"/>
+                <input type="submit"/>
+            </form>
+
+            <h2>Previously inserted Albums:</h2>
+            <table>
+                <tr><th>Name</th><th>Color</th></tr>
+                @for(a <- albums){
+                    <tr><td>@a.id</td><td>@a.artist</td><td>@a.title</td><td>@a.year</td><td>@a.rating</td></tr>
+                }
+            </table>
+        </div>
+
+
+    </div>
+}
